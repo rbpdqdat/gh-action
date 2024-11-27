@@ -1,0 +1,17 @@
+name: First Workflow
+# on is a reserved key 
+# event where it will be triggered
+# workflow_dispatch is where a manual trigger can be performed
+# https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#on
+
+on: workflow_dispatch
+# 
+jobs:
+  first-job:
+    #define the runner where the job will run
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - Yay!"
